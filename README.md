@@ -28,6 +28,7 @@ A simple, responsive basic arithmetic calculator built with HTML, CSS, and JavaS
 
 3.  Use the mouse or keyboard to interact with the calculator.
 
-
+## Calculator Interface
+![Calculator Screenshot](Demo.png)
 
 
