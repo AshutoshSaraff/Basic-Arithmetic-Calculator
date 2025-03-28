@@ -8,6 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    transition: background-color 0.3s;  
 }
 
 .calculator {
@@ -17,6 +18,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 300px;
     max-width: 90%;
+    transition: background-color 0.3s;
 }
 
 .calculator h2 {
@@ -36,6 +38,7 @@ body {
     word-wrap: break-word;
     min-height: 40px;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .buttons {
@@ -50,6 +53,7 @@ body {
     border-radius: 5px;
     padding: 15px;
     font-size: 1.3em;
+    transition: background-color 0.3s, transform 0.2s ease;
     
 }
 
@@ -83,4 +87,70 @@ body {
     background-color: red;
     color: white;
 
+}
+
+/* Adding Styling for dark mode */
+
+body.dark-mode {
+    background-color: #110e1b;
+}
+
+.dark-mode .calculator {
+    background-color: #001523;
+}
+.dark-mode .calculator h2{
+    color: white;
+}
+.dark-mode .display {
+    background-color: #11001c;
+    color: white;
+}
+
+.dark-mode .buttons button {
+    background-color: #11001c;
+    color: white;
+}
+
+.dark-mode .buttons button:hover {
+    background-color: #220135;
+}
+.dark-mode .buttons .operator{
+    color: red;
+}
+.dark-mode .buttons .operator:hover{
+     background-color: red;
+     color: white;
+}
+.dark-mode .buttons .clear{
+    color: red;
+}
+.dark-mode .buttons .clear:hover{
+    background-color: red;
+    color: white;
+}
+.buttons .equal{
+    color: red;
+}
+.dark-mode .buttons .equal:hover{
+    background-color: red;
+    color: white;
+
+}
+
+/* Adding Styling to Dark Mode Toggle Button */
+
+#darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#darkModeToggle img {
+    width: 40px;
+    height: 40px;
+    
 }

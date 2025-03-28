@@ -1,5 +1,16 @@
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.buttons button');
+const darkModeToggle = document.getElementById('darkModeToggle');
+let isDarkMode = false;
+
+// For Toggle Dark Mode
+darkModeToggle.addEventListener('click', () =>{
+    isDarkMode = !isDarkMode;
+    document.body.classList.toggle('dark-mode');
+
+    // For Changing icon 
+    darkModeToggle.innerHTML = `<img src="${isDarkMode ? 'Images/lightmode.png' : 'Images/darkmode.png'}" alt="Mode Icon">`;
+});
 
 let currentInput = '';
 let operator = null;
