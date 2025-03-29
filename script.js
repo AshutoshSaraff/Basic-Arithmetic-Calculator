@@ -3,6 +3,10 @@ const buttons = document.querySelectorAll('.buttons button');
 const darkModeToggle = document.getElementById('darkModeToggle');
 let isDarkMode = false;
 
+//Adding Script for History Button 
+const historyBtn = document.getElementById('historyBtn');
+let history = [];
+
 // For Toggle Dark Mode
 darkModeToggle.addEventListener('click', () =>{
     isDarkMode = !isDarkMode;
@@ -44,6 +48,10 @@ function handleButtonClick(buttonValue) {
                     result = firstOperand / secondOperand;
                     break;
             }
+
+            // Added for History Button
+            history.unshift(`${firstOperand} ${operator} ${secondOperand} = ${result}`);
+            if (history.length > 2) history.pop();
 
             display.textContent = result;
             currentInput = result.toString();
@@ -103,4 +111,11 @@ function handleButtonClick(buttonValue) {
             handleButtonClick('←');
         }
     });
-        
+//Adding Event Listeners for History Button
+
+historyBtn.addEventListener('click', () => {
+    if (history.length > 0) {
+        display.textContent = history.join(' | ');
+        display.style.fontSize = "1.1em";
+    }
+});       
